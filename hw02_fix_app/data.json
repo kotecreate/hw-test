@@ -10,5 +10,11 @@
         "age": 30,
         "name": "George",
         "departmentId": 2
+    },
+    {
+        "userId": 12,
+        "age": 33,
+        "name": "Ann",
+        "departmentId": 1
     }
 ]
