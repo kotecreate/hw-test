@@ -1,3 +1,3 @@
-module github.com/fixme_my_friend/hw02_fix_app
+module hw-test
 
 go 1.21

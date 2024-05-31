@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/fixme_my_friend/hw02_fix_app/printer"
-	"github.com/fixme_my_friend/hw02_fix_app/reader"
-	"github.com/fixme_my_friend/hw02_fix_app/types"
+	"hw-test/printer"
+	"hw-test/reader"
+	"hw-test/types"
 )
 
 func main() {
@@ -21,7 +20,7 @@ func main() {
 		path = "data.json"
 	}
 
-	staff, err = reader.ReadJSON(path, -1)
+	staff, err = reader.ReadJSON(path)
 	if err != nil {
 		fmt.Print(err)
 		return
