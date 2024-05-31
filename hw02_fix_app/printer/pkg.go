@@ -2,7 +2,7 @@ package printer
 
 import (
 	"fmt"
-	"hw-test/types"
+	"hw02/types"
 )
 
 func PrintStaff(staff []types.Employee) {
@@ -14,5 +14,4 @@ func PrintStaff(staff []types.Employee) {
 		}
 		fmt.Println(str)
 	}
-
 }

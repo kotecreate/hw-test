@@ -3,7 +3,7 @@ package reader
 import (
 	"encoding/json"
 	"fmt"
-	"hw-test/types"
+	"hw02/types"
 	"io"
 	"os"
 )
@@ -14,7 +14,6 @@ func ReadJSON(filePath string) ([]types.Employee, error) {
 		fmt.Printf("Error: %v", err)
 		return nil, err
 	}
-
 	bytes, err := io.ReadAll(f)
 	if err != nil {
 		fmt.Printf("Error: %v", err)

@@ -1,3 +1,3 @@
-module hw-test
+module hw02
 
-go 1.21
+go 1.22

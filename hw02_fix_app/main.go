@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"hw-test/printer"
-	"hw-test/reader"
-	"hw-test/types"
+	"hw02/printer"
+	"hw02/reader"
+	"hw02/types"
 )
 
 func main() {
