@@ -3,9 +3,10 @@ package reader
 import (
 	"encoding/json"
 	"fmt"
-	"hw02/types"
 	"io"
 	"os"
+
+	"github.com/kotecreate/hw-test/hw02_fix_app/types"
 )
 
 func ReadJSON(filePath string) ([]types.Employee, error) {

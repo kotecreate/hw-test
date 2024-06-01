@@ -2,7 +2,8 @@ package printer
 
 import (
 	"fmt"
-	"hw02/types"
+
+	"github.com/kotecreate/hw-test/hw02_fix_app/types"
 )
 
 func PrintStaff(staff []types.Employee) {

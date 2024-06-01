@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"hw02/printer"
-	"hw02/reader"
-	"hw02/types"
+
+	"github.com/kotecreate/hw-test/hw02_fix_app/printer"
+	"github.com/kotecreate/hw-test/hw02_fix_app/reader"
+	"github.com/kotecreate/hw-test/hw02_fix_app/types"
 )
 
 func main() {
