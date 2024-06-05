@@ -1,3 +1,3 @@
-module github.com/fixme_my_friend/hw03_chessboard
+module github.com/kotecreate/hw-test/hw03_chessboard
 
-go 1.20
+go 1.22
