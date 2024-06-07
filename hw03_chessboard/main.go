@@ -5,17 +5,20 @@ import "fmt"
 func main() {
 	var chessboard, one, two string
 	var a uint8
+	var err error
 	w, b := "  ", "##"
 	for {
 		fmt.Printf("Введите размер доски от 1 до 255: ")
-		fmt.Scanf("%v\n", &a)
-		if a > 0 && a <= 255 {
+		_, err = fmt.Scanf("%v\n", &a)
+		if err != nil {
+			fmt.Printf("Error: %v\n", err)
+			return
+		} else {
 			break
 		}
-		fmt.Println("Неверное значение")
 	}
 	sizeboard := int(a)
-	for i := 1; i <= sizeboard; i++ {
+	for i := 1; i <= sizeboard/2; i++ {
 		one += w + b
 		two += b + w
 	}
