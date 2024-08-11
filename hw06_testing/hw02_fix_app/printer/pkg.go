@@ -3,7 +3,7 @@ package printer
 import (
 	"fmt"
 
-	"github.com/kotecreate/hw-test/hw02_fix_app/types"
+	"github.com/kotecreate/hw-test/hw06_testing/hw02_fix_app/types"
 )
 
 func PrintStaff(staff []types.Employee) {
