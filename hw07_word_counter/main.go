@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	text := "Привет мир! привет привет!!!"
+	text := "Привет мир! привет привет!!"
 	fmt.Printf("%v\n", countWords(text))
 }
 
