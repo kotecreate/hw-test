@@ -13,18 +13,10 @@ func main() {
 }
 
 func countWords(str string) map[string]int {
-	var err error
 	sl := cleanWords(str)
-	if err != nil {
-		fmt.Println(err)
-	}
-	cache := map[string]int{}
+	cache := make(map[string]int)
 	for i := 0; i < len(sl); i++ {
-		if _, ok := cache[sl[i]]; !ok {
-			cache[sl[i]] = 1
-		} else {
-			cache[sl[i]]++
-		}
+		cache[sl[i]]++
 	}
 	return cache
 }

@@ -1,4 +1,4 @@
-module github.com/kotecreate/hw07_word_counter
+module github.com/kotecreate/hw-test/hw07_word_counter
 
 go 1.22
 
