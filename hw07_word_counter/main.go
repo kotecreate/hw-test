@@ -23,7 +23,7 @@ func countWords(str string) map[string]int {
 
 func cleanWords(st string) []string {
 	var slice []string
-	if utf8.ValidString(st); false {
+	if !utf8.ValidString(st) {
 		fmt.Println("Cтрока не валидна!")
 	}
 	reg := regexp.MustCompile(`[[:punct:]]`)
