@@ -6,10 +6,10 @@ import (
 
 func main() {
 	slice := []int{5, 9, 14, 19, 21, 25, 35, 42}
-	value := 99
+	value := 19
 	fmt.Printf("Массив: %v\n", slice)
 	fmt.Printf("Найти: %v\n", value)
-	fmt.Printf("Искомое: %v\n", binaryS(slice, value))
+	fmt.Printf("Позиция числа: %v\n", binaryS(slice, value))
 }
 
 func binaryS(sl []int, val int) int {
@@ -22,7 +22,7 @@ func binaryS(sl []int, val int) int {
 		valMid = sl[mid]
 		switch left <= right {
 		case valMid == val:
-			return sl[mid]
+			return mid
 		case valMid < val:
 			left = mid + 1
 		default:

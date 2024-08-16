@@ -17,7 +17,7 @@ func TestBinaryCaseTable(t *testing.T) {
 			name:  "testBinarySearch",
 			slice: []int{4, 7, 12, 17, 23, 25, 38, 42},
 			value: 38,
-			exp:   38,
+			exp:   6,
 		},
 		{
 			name:  "testBinarySearch",
