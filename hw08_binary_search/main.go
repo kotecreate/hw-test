@@ -6,7 +6,7 @@ import (
 
 func main() {
 	slice := []int{5, 9, 14, 19, 21, 25, 35, 42}
-	value := slice[3]
+	value := 25
 	fmt.Printf("Массив: %v\n", slice)
 	fmt.Printf("Найти: %v\n", value)
 	fmt.Printf("Искомое: %v\n", binaryS(slice, value))
@@ -29,5 +29,5 @@ func binaryS(sl []int, val int) int {
 			right = mid - 1
 		}
 	}
-	return valMid
+	return -1
 }
