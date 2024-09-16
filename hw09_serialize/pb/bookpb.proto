@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package bookpb;
+
+message BookInfo {
+    int64 Id = 1;
+    string Title = 2;
+    string Author = 3;
+    int32 Year = 4;
+    int32 Size = 5;
+    float Rate = 6;
+}
