@@ -10,3 +10,7 @@ message BookInfo {
     int32 Size = 5;
     float Rate = 6;
 }
+
+message BookList {
+    repeated BookInfo books = 1;
+}
