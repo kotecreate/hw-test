@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package bookpb;
+option go_package = "./";
 
 message BookInfo {
     int64 Id = 1;

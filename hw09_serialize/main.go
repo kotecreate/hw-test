@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/golang/protobuf/proto"
 	bookpb "github.com/kotecreate/hw-test/hw09_serialize/pb"
+	"google.golang.org/protobuf/proto"
 )
 
 type Book struct {
