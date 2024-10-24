@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
+	"math/rand/v2"
 	"time"
 )
 
@@ -17,7 +17,7 @@ func sensor(sens chan int) {
 			close(sens)
 			return
 		case sens <- data:
-			data = rand.Intn(100)
+			data = rand.IntN(1000)
 			time.Sleep(100 * time.Millisecond)
 		}
 	}
