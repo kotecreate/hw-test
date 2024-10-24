@@ -1,3 +1,3 @@
-module github.com/fixme_my_friend/hw10_motion_sensor
+module github.com/kotecreate/hw-test/hw10_motion_sensor
 
-go 1.20
+go 1.22
