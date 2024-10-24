@@ -19,10 +19,10 @@ func TestSensor(t *testing.T) {
 }
 
 func TestProcessed(t *testing.T) {
-	testSens := make(chan float64)
+	testSens2 := make(chan float64)
 	testResult := make(chan float64)
-	go sensor(testSens)
-	go processed(testSens, testResult)
+	go sensor(testSens2)
+	go processed(testSens2, testResult)
 	val, ok := <-testResult
 	if !ok {
 		t.Errorf("Канал передачи данных закрыт")
