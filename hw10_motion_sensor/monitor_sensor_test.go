@@ -6,7 +6,7 @@ import (
 )
 
 func TestSensor(t *testing.T) {
-	testSens := make(chan float64)
+	testSens := make(chan int)
 	go sensor(testSens)
 	for i := 0; i < 10; i++ {
 		val, ok := <-testSens
@@ -19,8 +19,8 @@ func TestSensor(t *testing.T) {
 }
 
 func TestProcessed(t *testing.T) {
-	testSens2 := make(chan float64)
-	testResult := make(chan float64)
+	testSens2 := make(chan int)
+	testResult := make(chan int)
 	go sensor(testSens2)
 	go processed(testSens2, testResult)
 	val, ok := <-testResult
