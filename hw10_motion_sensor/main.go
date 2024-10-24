@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"math/rand/v2" //nolint:gosec
+	"math/rand/v2"
 	"time"
 )
 
@@ -17,7 +17,7 @@ func sensor(sens chan int) {
 			close(sens)
 			return
 		case sens <- data:
-			data = rand.IntN(1000)
+			data = rand.IntN(1000) //nolint:gosec
 			time.Sleep(100 * time.Millisecond)
 		}
 	}
