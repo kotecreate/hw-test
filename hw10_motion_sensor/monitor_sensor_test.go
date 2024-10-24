@@ -23,12 +23,10 @@ func TestProcessed(t *testing.T) {
 	testResult := make(chan float64)
 	go sensor(testSens)
 	go processed(testSens, testResult)
-	for {
-		val, ok := <-testResult
-		if !ok {
-			t.Errorf("Канал передачи данных закрыт")
-			return
-		}
-		fmt.Println("Среднее арифмитическое: ", val)
+	val, ok := <-testResult
+	if !ok {
+		t.Errorf("Канал передачи данных закрыт")
+		return
 	}
+	fmt.Println("Среднее арифмитическое: ", val)
 }
