@@ -14,5 +14,4 @@ func TestProcessed(t *testing.T) {
 	testResult := make(chan float64)
 	go sensor(testSens)
 	go processed(testSens, testResult)
-
 }
