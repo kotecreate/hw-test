@@ -7,7 +7,6 @@ import (
 func TestSensor(t *testing.T) {
 	testSens := make(chan float64)
 	go sensor(testSens)
-
 }
 
 func TestProcessed(t *testing.T) {

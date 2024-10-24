@@ -48,7 +48,6 @@ func processed(sens, res chan float64) {
 func main() {
 	sens := make(chan float64)
 	res := make(chan float64)
-
 	go sensor(sens)
 	go processed(sens, res)
 	for {
