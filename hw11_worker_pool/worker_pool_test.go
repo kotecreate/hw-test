@@ -17,7 +17,7 @@ func TestWorker(t *testing.T) {
 		go r3(&mutex, &wg)
 	}
 	wg.Wait()
-	if count != 600 {
+	if count != 1200 {
 		t.Error("Неверное значение счетчика")
 	} else {
 		fmt.Println("Итог: ", count)

@@ -18,7 +18,7 @@ func r1(m *sync.Mutex, wg *sync.WaitGroup) {
 func r2(m *sync.Mutex, wg *sync.WaitGroup) {
 	defer wg.Done()
 	m.Lock()
-	count++
+	count += 2
 	fmt.Printf("Счетчик 2: %d\n", count)
 	m.Unlock()
 }
@@ -26,7 +26,7 @@ func r2(m *sync.Mutex, wg *sync.WaitGroup) {
 func r3(m *sync.Mutex, wg *sync.WaitGroup) {
 	defer wg.Done()
 	m.Lock()
-	count++
+	count += 3
 	fmt.Printf("Счетчик 3: %d\n", count)
 	m.Unlock()
 }
