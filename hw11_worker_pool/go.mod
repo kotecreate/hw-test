@@ -1,3 +1,3 @@
-module github.com/fixme_my_friend/hw11_worker_pool
+module github.com/kotecreate/hw-test/hw11_worker_pool
 
-go 1.20
+go 1.22
