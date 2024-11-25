@@ -72,7 +72,7 @@ func printStats(stats map[string]int, outputPath string) error {
 
 func main() {
 	fileFlag := flag.String("file", "", "Path to the log file")
-	levelFlag := flag.String("level", "info", "Filter by log level")
+	levelFlag := flag.String("level", "INFO", "Filter by log level")
 	outputFlag := flag.String("output", "", "Path to the output file")
 	flag.Parse()
 
@@ -91,8 +91,6 @@ func main() {
 
 	level := *levelFlag
 	if level == "" {
-		level = "info"
-	} else {
 		level = logAnalyzerLevel
 	}
 
