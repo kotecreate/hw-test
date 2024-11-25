@@ -1,0 +1,2 @@
+2024-01-01T00:00:01 INFO First message
+2024-01-02T00:00:05 WARNING Second message
