@@ -11,9 +11,7 @@ type Response struct {
 	Message string `json:"message"`
 }
 
-var (
-	addressFlag = flag.String("address", ":8080", "server address")
-)
+var addressFlag = flag.String("address", ":8080", "server address")
 
 func handleRequest(w http.ResponseWriter, r *http.Request) {
 	log.Printf("Received %s request from %s for path %s", r.Method, r.RemoteAddr, r.URL.Path)
