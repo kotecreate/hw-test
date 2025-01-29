@@ -13,13 +13,13 @@ import (
 var (
 	urlFlag     = flag.String("url", "", "url server")
 	pathFlag    = flag.String("path", "/", "path resource")
-	methodFlag  = flag.String("method", "GET", "HTTP method")
+	methodFlag  = flag.String("method", http.MethodGet, "HTTP method")
 	contentType = "application/json"
 	requestBody = []byte(`{"message":"hello"}`)
 )
 
 func sendGetRequest(url string) ([]byte, error) {
-	req, err := http.NewRequest("GET", url, nil)
+	req, err := http.NewRequest(http.MethodGet, url, nil)
 	if err != nil {
 		return nil, err
 	}
@@ -40,7 +40,7 @@ func sendGetRequest(url string) ([]byte, error) {
 }
 
 func sendPostRequest(url string, body []byte) ([]byte, error) {
-	req, err := http.NewRequest("POST", url, bytes.NewReader(body))
+	req, err := http.NewRequest(http.MethodPost, url, bytes.NewReader(body))
 	if err != nil {
 		return nil, err
 	}
@@ -64,7 +64,7 @@ func sendPostRequest(url string, body []byte) ([]byte, error) {
 func main() {
 	flag.Parse()
 
-	if *urlFlag == "" || (*methodFlag != "GET" && *methodFlag != "POST") {
+	if *urlFlag == "" || (*methodFlag != http.MethodGet && *methodFlag != http.MethodPost) {
 		flag.Usage()
 		os.Exit(1)
 	}
@@ -75,9 +75,9 @@ func main() {
 	var err error
 
 	switch *methodFlag {
-	case "GET":
+	case http.MethodGet:
 		responseBody, err = sendGetRequest(url)
-	case "POST":
+	case http.MethodPost:
 		responseBody, err = sendPostRequest(url, requestBody)
 	}
 
