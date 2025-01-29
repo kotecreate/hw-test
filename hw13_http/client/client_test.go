@@ -42,12 +42,12 @@ func TestSendPostRequest(t *testing.T) {
 	}))
 	defer ts.Close()
 
-	requestBody, err := sendPostRequest(ts.URL, requestBody)
+	responseBody, err := sendPostRequest(ts.URL, requestBody)
 	if err != nil {
 		t.Errorf("Error: %v", err)
 	}
 
 	expected := `{"message": "test request"}`
-	actual := string(requestBody)
+	actual := string(responseBody)
 	assert.Equal(t, expected, actual)
 }
